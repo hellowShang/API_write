@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>企业微信注册</h1>
-    <form action="register" method="post" enctype="multipart/form-data">
+    <form action="comregisterDo" method="post" enctype="multipart/form-data">
         @csrf
         <table>
             <tr>

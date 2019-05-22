@@ -17,8 +17,9 @@ Route::get('/', function () {
 //    phpinfo();
 });
 
-// 用户注册
-Route::any('register','Api\UserController@register');
+// 企业注册
+Route::get('comregister','Api\UserController@comregister');
+Route::post('comregisterDo','Api\UserController@register');
 
 // 请求次数的中间件
 Route::middleware('num')->group(function () {

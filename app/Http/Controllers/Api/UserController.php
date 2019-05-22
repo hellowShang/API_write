@@ -9,6 +9,11 @@ use Illuminate\Support\Str;
 class UserController extends Controller
 {
     // 用户注册
+    public function comregister(){
+        return view('user.register');
+    }
+
+    // 用户注册执行
     public function register(){
         $data = request()->all();
 
