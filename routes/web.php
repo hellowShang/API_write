@@ -12,9 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('user.register');
+    return view('welcome');
+//    return view('user.register');
+//    phpinfo();
 });
-
 
 // 用户注册
 Route::any('register','Api\UserController@register');
@@ -40,3 +41,13 @@ Route::middleware('num')->group(function () {
     });
 });
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+// 签到
+Route::get('sign', 'HomeController@sign');
+
+// 获取签到人数
+Route::get('count', 'HomeController@countSign');
